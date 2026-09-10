@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bk06c8kivu7ql"]
+
+[ext_resource type="PackedScene" uid="uid://c238f6hoke63b" path="res://scenes/player.tscn" id="1_f6rwo"]
+[ext_resource type="PackedScene" uid="uid://bwj0kh1e04q4d" path="res://scenes/hazard.tscn" id="2_nhu02"]
+[ext_resource type="PackedScene" uid="uid://b8tmh8wnidu4m" path="res://scenes/wall.tscn" id="3_ghpiu"]
+[ext_resource type="PackedScene" uid="uid://ddpinvuurif1b" path="res://scenes/pickup.tscn" id="4_5mjjg"]
+
+[node name="SecondLevel" type="Node2D" unique_id=1372924690]
+
+[node name="Player" parent="." unique_id=62539408 instance=ExtResource("1_f6rwo")]
+position = Vector2(300, 184)
+
+[node name="Hazards" type="Node2D" parent="." unique_id=1079908440]
+
+[node name="Hazard" parent="Hazards" unique_id=1525377852 instance=ExtResource("2_nhu02")]
+position = Vector2(127, 153)
+
+[node name="Hazard2" parent="Hazards" unique_id=35577474 instance=ExtResource("2_nhu02")]
+position = Vector2(570, 274)
+
+[node name="Hazard3" parent="Hazards" unique_id=310245125 instance=ExtResource("2_nhu02")]
+position = Vector2(62, 87)
+rotation = 1.5707964
+
+[node name="Walls" type="Node2D" parent="." unique_id=694748395]
+
+[node name="WallTop" parent="Walls" unique_id=844738344 instance=ExtResource("3_ghpiu")]
+position = Vector2(200, 16)
+
+[node name="WallTop2" parent="Walls" unique_id=1401850884 instance=ExtResource("3_ghpiu")]
+position = Vector2(441, 16)
+
+[node name="WallBottom" parent="Walls" unique_id=1699110743 instance=ExtResource("3_ghpiu")]
+position = Vector2(200, 345)
+
+[node name="WallBottom2" parent="Walls" unique_id=503970102 instance=ExtResource("3_ghpiu")]
+position = Vector2(441, 345)
+
+[node name="WallLeft" parent="Walls" unique_id=1296372140 instance=ExtResource("3_ghpiu")]
+position = Vector2(0, 184)
+rotation = 1.5707964
+
+[node name="WallRight" parent="Walls" unique_id=1332640910 instance=ExtResource("3_ghpiu")]
+position = Vector2(641, 184)
+rotation = 1.5707964
+
+[node name="Pickups" type="Node2D" parent="." unique_id=466742687]
+
+[node name="Pickup" parent="Pickups" unique_id=712332866 instance=ExtResource("4_5mjjg")]
+position = Vector2(119, 120)
+
+[node name="Pickup2" parent="Pickups" unique_id=821397422 instance=ExtResource("4_5mjjg")]
+position = Vector2(608, 306)
+
+[node name="Pickup3" parent="Pickups" unique_id=2073385350 instance=ExtResource("4_5mjjg")]
+position = Vector2(32, 79)
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=580468361]
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 72.0
+offset_bottom = 71.0
+metadata/_edit_use_anchors_ = true

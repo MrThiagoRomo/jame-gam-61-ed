@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dkljbuxo6maw"]
+
+[ext_resource type="Script" uid="uid://c6chejhj1n7cp" path="res://scripts/main.gd" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://c238f6hoke63b" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://b8tmh8wnidu4m" path="res://scenes/wall.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://ddpinvuurif1b" path="res://scenes/pickup.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bwj0kh1e04q4d" path="res://scenes/hazard.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://d0odwdoyrmwyn" path="res://scenes/exit.tscn" id="6_tefeu"]
+
+[node name="main" type="Node2D" unique_id=1406312611]
+script = ExtResource("1_jyhfs")
+
+[node name="Exit" parent="." unique_id=236260566 instance=ExtResource("6_tefeu")]
+position = Vector2(415, 12)
+
+[node name="Player" parent="." unique_id=62539408 instance=ExtResource("1_o5qli")]
+position = Vector2(300, 184)
+
+[node name="Walls" type="Node2D" parent="." unique_id=1187778602]
+
+[node name="WallTop" parent="Walls" unique_id=844738344 instance=ExtResource("2_0wfyh")]
+position = Vector2(200, 16)
+
+[node name="WallTop2" parent="Walls" unique_id=875113126 instance=ExtResource("2_0wfyh")]
+position = Vector2(630, 16)
+
+[node name="WallBottom" parent="Walls" unique_id=830299700 instance=ExtResource("2_0wfyh")]
+position = Vector2(200, 345)
+
+[node name="WallBottom2" parent="Walls" unique_id=822277809 instance=ExtResource("2_0wfyh")]
+position = Vector2(441, 345)
+
+[node name="WallLeft" parent="Walls" unique_id=1701504803 instance=ExtResource("2_0wfyh")]
+position = Vector2(0, 184)
+rotation = 1.5707964
+
+[node name="WallRight" parent="Walls" unique_id=501059447 instance=ExtResource("2_0wfyh")]
+position = Vector2(641, 184)
+rotation = 1.5707964
+
+[node name="Pickups" type="Node2D" parent="." unique_id=1161036124]
+
+[node name="Pickup" parent="Pickups" unique_id=712332866 instance=ExtResource("3_sugp2")]
+position = Vector2(119, 120)
+
+[node name="Pickup2" parent="Pickups" unique_id=1431667350 instance=ExtResource("3_sugp2")]
+position = Vector2(218, 239)
+
+[node name="Pickup3" parent="Pickups" unique_id=1223081958 instance=ExtResource("3_sugp2")]
+position = Vector2(423, 207)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=721073850]
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=2009779915]
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 72.0
+offset_bottom = 71.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Hazards" type="Node2D" parent="." unique_id=659497504]
+
+[node name="Hazard" parent="Hazards" unique_id=1525377852 instance=ExtResource("5_tbgi4")]
+position = Vector2(441, 169)
+
+[node name="Hazard2" parent="Hazards" unique_id=1591639642 instance=ExtResource("5_tbgi4")]
+position = Vector2(441, 239)
+
+[node name="Hazard3" parent="Hazards" unique_id=825456952 instance=ExtResource("5_tbgi4")]
+position = Vector2(501, 207)
+rotation = 1.5707964
